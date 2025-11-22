@@ -30,7 +30,7 @@ const ChatInterface = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('https://indian-constitution-ai-bot.onrender.com/chat', {
+            const response = await fetch('https://indian-constitution-ai-bot1.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
