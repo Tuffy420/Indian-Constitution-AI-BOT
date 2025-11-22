@@ -1,0 +1,6 @@
+"What are my Fundamental Rights?" (Tests list retrieval)
+"Explain Article 21." (Tests specific article lookup)
+"What does the Constitution say about the President?" (Tests broader topic search)
+"Is there a Right to Education?" (Tests specific right mapping)
+"What is the Preamble?" (Tests introductory text)
+"Can the Constitution be amended?" (Tests Article 368)
