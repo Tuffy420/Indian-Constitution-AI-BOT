@@ -30,9 +30,8 @@ const ChatInterface = () => {
         setIsLoading(true);
 
         try {
-            const API_URL = import.meta.env.VITE_API_URL;  // Correct API URL from Vercel
-
-            const response = await fetch(`${API_URL}/chat`, {
+            const API_URL = import.meta.env.VITE_API_URL;
+const response = await fetch(`${API_URL}/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,24 +84,17 @@ const ChatInterface = () => {
                         className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                         <div
-                            className={`max-w-[85%] md:max-w-[70%] p-5 rounded-2xl shadow-md relative ${
-                                msg.role === 'user'
+                            className={`max-w-[85%] md:max-w-[70%] p-5 rounded-2xl shadow-md relative ${msg.role === 'user'
                                     ? 'bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-br-none'
                                     : 'bg-white text-gray-800 rounded-bl-none border-l-4 border-primary'
-                            }`}
+                                }`}
                         >
                             {msg.role === 'assistant' && (
                                 <div className="absolute -top-3 -left-3 bg-primary text-white p-1 rounded-full shadow-sm">
                                     <Scale className="w-4 h-4" />
                                 </div>
                             )}
-                            <p
-                                className={`leading-relaxed ${
-                                    msg.role === 'assistant'
-                                        ? 'font-serif text-lg'
-                                        : 'font-sans'
-                                }`}
-                            >
+                            <p className={`leading-relaxed ${msg.role === 'assistant' ? 'font-serif text-lg' : 'font-sans'}`}>
                                 {msg.content}
                             </p>
                         </div>
